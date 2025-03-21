@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Открываю Telegram…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    button {
+      padding: 1em 2em;
+      font-size: 1.2em;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h2>Открываю Telegram…</h2>
+  <p>Если ничего не произошло, нажми кнопку ниже:</p>
+  <button id="open">Открыть в Telegram</button>
+
+  <script>
+    const targetUrl = "https://t.me/SWZ_bot?start=ytGPTpromt";
+
+    setTimeout(() => {
+      window.location.href = targetUrl;
+    }, 500);
+
+    document.getElementById("open").addEventListener("click", () => {
+      window.open(targetUrl, "_blank");
+    });
+  </script>
+</body>
+</html>
